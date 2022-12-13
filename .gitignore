@@ -4,3 +4,4 @@ curr_finders.json
 database.json
 UpdateDatabase.py
 Test.py
+.env

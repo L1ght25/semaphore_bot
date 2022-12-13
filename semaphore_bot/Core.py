@@ -3,11 +3,10 @@ from telebot.async_telebot import AsyncTeleBot
 import random
 import asyncio
 import json
-import key
 from collections import Counter
+import os
 
-
-bot = AsyncTeleBot(key.TOKEN)
+bot = AsyncTeleBot(os.getenv('TOKEN'))
 database = json.load(open('database.json'))
 anek_database = database['database_of_aneks']
 best_anek = database['best_anek']
@@ -69,7 +68,7 @@ async def get_short_anek(message):
         split_data = anek.split()
         Counters_found = Counter(split_data)
         most_freq_word = Counters_found.most_common(1)[0][0]
-        if most_freq_word == '-' or most_freq_word == '—' or most_freq_word == '--':
+        if most_freq_word == '-' or most_freq_word == '—' or len(most_freq_word) == 1:
             most_freq_word = Counters_found.most_common(2)[1][0]
         anek = anek.replace(most_freq_word, "СЕМАФОР")
         await bot.reply_to(message, "Наслаждайся")
