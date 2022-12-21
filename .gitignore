@@ -1,7 +1,9 @@
 *.session
 key.py
 curr_finders.json
-database.json
+# database.json
 UpdateDatabase.py
 Test.py
 .env
+dict_finders_and_words.json
+curr_finders_key_words.json

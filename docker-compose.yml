@@ -1,8 +1,17 @@
 version: '3.7'
 
 services:
+  server:
+    container_name: server_bot
+    build: ./server
+    env_file:
+      - .env
+    ports:
+      - '8000:8000'
   bot:
     container_name: tg_bot
     build: ./semaphore_bot
     env_file:
       - .env
+    depends_on:
+      - server
