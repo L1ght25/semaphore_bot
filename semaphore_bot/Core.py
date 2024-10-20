@@ -97,7 +97,7 @@ async def get_short_anek(message):
 async def find_anek(key, message):
     if IsBadString(key):  # антифрод))
             await bot.reply_to(message, "Ах ты маленький шалун) Не будет тебе никаких анеков! Держи семафор:")
-            sti = 'CAACAgIAAxkBAAEGz15jmGIDy_QFu7QoXvX4UP4k7Fz6xAACwhcAAmsgUEjKrGkqZXjZESwE'
+            sti = 'CAACAgIAAxkBAAEJU5dnFWxa3R3jHuOjMvEi0_iXhikrMAACOWUAArQ3qUjUyc7gEzJ_mDYE'
             await bot.send_sticker(message.chat.id, sti)
             return -1
     answers = []
