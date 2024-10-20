@@ -46,7 +46,7 @@ async def get_random_anek(message):
 
 @bot.message_handler(commands=['send_semaphore'])
 async def get_semaphore(message):
-    sti = 'CAACAgIAAxkBAAEGz15jmGIDy_QFu7QoXvX4UP4k7Fz6xAACwhcAAmsgUEjKrGkqZXjZESwE'
+    sti = 'CAACAgIAAxkBAAEJU5dnFWxa3R3jHuOjMvEi0_iXhikrMAACOWUAArQ3qUjUyc7gEzJ_mDYE'
     await bot.send_sticker(message.chat.id, sti)
 
 @bot.message_handler(commands=['best_anek'])
